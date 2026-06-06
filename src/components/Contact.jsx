@@ -4,9 +4,9 @@ import { IconSend, IconWechat, IconMail, IconCode } from './icons.jsx'
 import './Contact.css'
 
 const channels = [
-  { Icon: IconSend, label: 'Telegram', value: '@yourtechpartner' },
-  { Icon: IconWechat, label: '微信', value: 'yourtechpartner' },
-  { Icon: IconMail, label: 'Email', value: 'hello@yourtechpartner.com' },
+  { Icon: IconSend, label: 'Telegram', value: '@agentictamer' },
+  { Icon: IconWechat, label: '微信', value: 'agentictamer' },
+  { Icon: IconMail, label: 'Email', value: 'agentictamer' },
 ]
 
 // Decorative QR-style grid (not a real scannable code — placeholder per design).

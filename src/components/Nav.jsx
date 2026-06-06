@@ -13,9 +13,9 @@ export default function Nav() {
       <div className="container nav__inner">
         <a className="nav__brand" href="#top">
           <span className="nav__logo"><IconCode width={20} height={20} /></span>
-          <span className="nav__name">技术伙伴</span>
+          <span className="nav__name">AgenticTamer</span>
           <span className="nav__sep">·</span>
-          <span className="nav__slogan">与您的技术团队一起落地您的想法</span>
+          <span className="nav__slogan">赋能您的技术团队，让落地更快、更稳。</span>
         </a>
         <nav className="nav__links" aria-label="主导航">
           {links.map((l) => (

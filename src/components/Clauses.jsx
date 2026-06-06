@@ -20,7 +20,7 @@ export default function Clauses() {
     <section className="section clauses" id="clauses">
       <div className="container">
         <div className="clauses__head reveal" ref={head}>
-          <div className="divider-deco"><span /> RISK CONTROL <span /></div>
+          <div className="divider-deco"><span /> NOTES<span /></div>
           <h2 className="section-title">风险控制与服务协议关键条款</h2>
         </div>
         <div className="clauses__grid">

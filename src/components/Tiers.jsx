@@ -87,7 +87,7 @@ export default function Tiers() {
     <section className="section tiers" id="tiers">
       <div className="container">
         <div className="tiers__head reveal" ref={head}>
-          <p className="eyebrow">PRICING · 灵活合作档位</p>
+          <p className="eyebrow">PLAN · 灵活合作</p>
           <h2 className="section-title">从咨询到合伙，按需选择</h2>
         </div>
         <div className="tiers__grid">
