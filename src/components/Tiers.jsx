@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal.js'
 import { tiers } from '../data/content.js'
 import { IconCheck, IconClose, IconCalendar, IconClock } from './icons.jsx'
@@ -76,7 +77,7 @@ function TierCard({ tier, index }) {
         ))}
       </ul>
 
-      <a className="tier__cta" href="#contact">选择{tier.name}</a>
+      <Link className="tier__cta" to="/contact">选择{tier.name}</Link>
     </article>
   )
 }
