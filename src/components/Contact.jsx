@@ -1,12 +1,12 @@
 import { useReveal } from '../hooks/useReveal.js'
 import { trustBadges } from '../data/content.js'
-import { IconSend, IconWechat, IconMail, IconCode } from './icons.jsx'
+import { IconSend, IconWechat, IconMail, IconX, IconCode } from './icons.jsx'
 import './Contact.css'
 
 const channels = [
-  { Icon: IconSend, label: 'Telegram', value: '@agentictamer' },
-  { Icon: IconWechat, label: '微信', value: 'agentictamer' },
-  { Icon: IconMail, label: 'Email', value: 'agentictamer' },
+  { Icon: IconSend, label: 'Telegram', value: '@Ox6368616e67', href: 'https://t.me/Ox6368616e67' },
+  { Icon: IconX, label: 'X', value: '@0x6368616e67', href: 'https://x.com/0x6368616e67' },
+  { Icon: IconMail, label: 'Email', value: 'Ox6368616e67@gmail.com' },
 ]
 
 // Decorative QR-style grid (not a real scannable code — placeholder per design).
@@ -61,11 +61,14 @@ export default function Contact() {
             <ul className="contact__channels">
               {channels.map((ch) => {
                 const { Icon } = ch
+                const valueEl = ch.href
+                  ? <a href={ch.href} target="_blank" rel="noopener noreferrer" className="contact__ch-value">{ch.value}</a>
+                  : <span className="contact__ch-value">{ch.value}</span>
                 return (
                   <li key={ch.label}>
                     <span className="contact__ch-icon"><Icon width={18} height={18} /></span>
                     <span className="contact__ch-label">{ch.label}：</span>
-                    <span className="contact__ch-value">{ch.value}</span>
+                    {valueEl}
                   </li>
                 )
               })}
