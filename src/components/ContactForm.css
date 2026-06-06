@@ -1,0 +1,200 @@
+.cf-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-page main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+}
+
+.cf-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 48px 40px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(20, 36, 78, 0.6), rgba(12, 20, 46, 0.6)),
+    radial-gradient(500px 300px at 0% 0%, rgba(47, 224, 192, 0.12), transparent 70%),
+    radial-gradient(500px 300px at 100% 100%, rgba(167, 139, 255, 0.12), transparent 70%);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.cf-title {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 800;
+  color: var(--txt-hi);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.cf-subtitle {
+  font-size: 14px;
+  color: var(--txt-dim);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cf-field {
+  margin-bottom: 20px;
+}
+
+.cf-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--txt);
+  margin-bottom: 8px;
+}
+
+.cf-field input,
+.cf-field textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: var(--font);
+  color: var(--txt-hi);
+  background: rgba(10, 16, 36, 0.8);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cf-field input::placeholder,
+.cf-field textarea::placeholder {
+  color: var(--txt-faint);
+}
+
+.cf-field input:focus,
+.cf-field textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(47, 224, 192, 0.15);
+}
+
+.cf-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.cf-submit {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font);
+  color: #06121a;
+  background: linear-gradient(135deg, var(--teal), #24c9a8);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(47, 224, 192, 0.25);
+}
+
+.cf-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 30px rgba(47, 224, 192, 0.35);
+}
+
+.cf-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Dialog overlay ── */
+.cf-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  background: rgba(6, 10, 23, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.cf-dialog {
+  width: 90%;
+  max-width: 380px;
+  padding: 36px 32px 28px;
+  border-radius: 22px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cf-dialog__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--txt-hi);
+  margin-bottom: 10px;
+}
+
+.cf-dialog__body {
+  font-size: 14px;
+  color: var(--txt-dim);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.cf-dialog__spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2.5px solid var(--line-strong);
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: cf-spin 0.7s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes cf-spin {
+  to { transform: rotate(360deg); }
+}
+
+.cf-dialog__btn {
+  padding: 10px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  color: #06121a;
+  background: linear-gradient(135deg, var(--teal), #24c9a8);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.cf-dialog__btn:hover {
+  box-shadow: 0 4px 20px rgba(47, 224, 192, 0.3);
+}
+
+/* ── Back link ── */
+.cf-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--txt-dim);
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.cf-back:hover {
+  color: var(--txt-hi);
+}
+
+@media (max-width: 520px) {
+  .cf-card {
+    padding: 36px 24px;
+  }
+}

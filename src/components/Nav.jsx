@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom'
 import { IconCode } from './icons.jsx'
 import './Nav.css'
 
 const links = [
   { href: '#tiers', label: '服务方案' },
   { href: '#clauses', label: '协议条款' },
-  { href: '#contact', label: '立即联系' },
 ]
 
 export default function Nav() {
@@ -22,7 +22,7 @@ export default function Nav() {
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
         </nav>
-        <a className="nav__cta" href="#contact">咨询合作</a>
+        <Link className="nav__cta" to="/contact">咨询合作</Link>
       </div>
     </header>
   )

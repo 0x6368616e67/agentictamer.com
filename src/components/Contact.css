@@ -3,9 +3,6 @@
 }
 
 .contact__inner.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
   padding: 30px 88px;
   border-radius: 26px;
   background:
@@ -16,7 +13,7 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
-/* left */
+/* left — now full width */
 .contact__left {
   display: flex;
   flex-direction: column;
@@ -59,88 +56,9 @@
   line-height: 1.4;
 }
 
-/* right */
-.contact__right {
-  border-left: 1px solid var(--line);
-  padding-left: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* channels (left) + QR (right) sit side by side, QR spans all three rows */
-.contact__connect {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.contact__channels {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  flex: 1;
-  min-width: 0;
-}
-.contact__channels li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-.contact__ch-icon {
-  display: grid; place-items: center;
-  width: 34px; height: 34px;
-  border-radius: 9px;
-  color: var(--blue-soft);
-  background: rgba(74, 158, 255, 0.1);
-  border: 1px solid rgba(74, 158, 255, 0.25);
-  flex-shrink: 0;
-}
-.contact__ch-label { color: var(--txt-dim); white-space: nowrap; }
-.contact__ch-value { color: var(--txt-hi); font-weight: 600; white-space: nowrap; }
-
-.contact__qr-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-.qr {
-  position: relative;
-  width: 140px; height: 140px;
-  padding: 10px;
-  border-radius: 16px;
-  background: #fff;
-  flex-shrink: 0;
-}
-.qr__grid {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(11, 1fr);
-  width: 100%; height: 100%;
-  gap: 1px;
-}
-.qr__grid span { border-radius: 1px; }
-.qr__grid span.on { background: #0a1024; }
-.qr__logo {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid; place-items: center;
-  width: 30px; height: 30px;
-  border-radius: 8px;
-  color: var(--teal);
-  background: #fff;
-  border: 2px solid #0a1024;
-}
-.contact__qr-tip { font-size: 13px; color: var(--txt-dim); }
-
 @media (max-width: 860px) {
-  .contact__inner.container { grid-template-columns: 1fr; padding: 36px 28px; }
-  .contact__right { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 32px; }
+  .contact__inner.container { padding: 36px 28px; }
 }
 @media (max-width: 520px) {
   .contact__badges { grid-template-columns: repeat(2, 1fr); }
-  .contact__connect { flex-direction: column; align-items: stretch; gap: 26px; }
-  .contact__qr-wrap { align-self: center; }
 }
